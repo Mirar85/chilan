@@ -1,0 +1,741 @@
+@charset "utf-8";
+
+body
+{
+    margin: -4% 0% 0% 0% !important;
+    margin/**/: 0%;
+    padding: 4% 0% 0% 0% !important;
+    padding/**/: 0%;
+    font-size: 0.8em;
+    background-image: url(../gfx/background.jpg); background-repeat: repeat;
+    text-align: center;
+    height: 100%;
+    font-family:  Verdana, Arial, Helvetica, sans-serif;
+}
+
+#preload
+{
+    position: absolute;
+    left: 500px;
+    top: 100px;
+    z-index: 1000;
+}
+
+.menu a:link { color: #00000A; text-decoration: none;}
+.menu a:visited { color: #00000A; text-decoration: none;}
+.menu a:hover { color: #00000A;text-decoration: underline;}
+
+.menu_rechts a:link { color: #00000A; text-decoration: none;}
+.menu_rechts a:visited { color: #00000A; text-decoration: none;}
+.menu_rechts a:hover { color: #00000A;text-decoration: underline;}
+
+.logintab a:link { color: #FEFEFE; text-decoration: none;}
+.logintab a:visited { color: #FEFEFE; text-decoration: none;}
+.logintab a:hover { color: #FEFEFE;text-decoration: underline;}
+
+.spektab a:link { color: #0049EE; text-decoration: none;}
+.speaktab a:visited { color: #0049EE; text-decoration: none;}
+.speaktab a:hover { color: #0049EE;text-decoration: underline;}
+
+.button
+{
+    background-color: #F0EDCA;
+    border: 1px solid #00000A;
+    padding: 0.2em;
+    margin: 0.4em;
+}
+
+.buttonKat
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 5px 0px 5px;
+    height:18px;
+    border:1px solid #000;
+    background-color: #F0EDCA;
+}
+
+.inhalt
+{
+    /*width: 61em !important;
+    width /**//*: 60em;*/
+    width: 71.1em !important;
+    width /**/: 72em;
+
+    min-height: 50em;
+    margin: 12px auto 12px auto;
+    background-color: #E4E4E4;
+    border: 1px solid #00000A;
+    text-align: left;
+}
+
+h5
+{
+    font-size: 1.1em;
+    padding: 0em;
+    margin: 0em;
+    text-decoration: underline;
+}
+
+.oben
+{
+    margin: 0em;
+    /* width: 57.9em !important;
+     width /**//*: 60em;*/
+    width: 68em !important;
+    width /**/: 70em;
+    height: 10em;
+    color: #fff;
+    padding: 3em 0em 0em 3.1em;
+    /*border-bottom: 2px solid #A8A9BB;*/
+    background-image: url(../gfx/chilan_Collection_oben.jpg); background-repeat: repeat;
+    overflow:hidden;
+}
+
+.speaktab
+{
+    position: absolute;
+    height: auto;
+    margin: -15px auto 12px 45em;
+    width: 20em !important;
+    width /**/: 22em;
+    padding: 1em 1em 1em 1em;
+    background: #88a;
+    opacity: 0.75;       /* modern browser */
+    -moz-opacity: 0.75;  /* older Mozilla browser */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; /* IE8 in Standard Compliant Mode */
+    filter:alpha(opacity=75); /* IE5.x -7.0 */
+}
+
+.registertab
+{
+    padding: 0.6em;
+}
+
+.logintab form
+{
+    float: left;
+}
+
+.logintab input
+{
+    padding: 0.1em;
+    margin: 0.5em;
+}
+.logintab
+{
+    height: 100%;
+    margin-left: -3.1em;
+    padding-left: 1em;
+    margin-top: 2em;
+    background: #88a;
+    opacity: 0.75;       /* modern browser */
+    -moz-opacity: 0.75;  /* older Mozilla browser */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; /* IE8 in Standard Compliant Mode */
+    filter:alpha(opacity=75); /* IE5.x -7.0 */
+    border-bottom: 1px solid #00000A;
+}
+
+.logintab ul
+{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.logintab li
+{
+    float: left;
+}
+
+.oben h1
+{
+    margin: 0em;
+    font-size: 2.5em;
+}
+.oben h2
+{
+    font-size: 1em;
+    margin: 0em 0em 0em 0em;
+    display: inline;
+}
+
+.oben h3
+{
+    font-size: 1.1em;
+    margin: 0em 0em 0em 0em;
+    display: inline;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+.unten
+{
+    margin: 0em;
+    width: 68em !important;
+    width /**/: 70em;
+    height: 3em;
+    color: #fff;
+    padding: 3em 0em 0em 3.1em;
+    background-image: url(../gfx/chilan_Collection_unten.jpg); background-repeat: repeat;
+    clear: both;
+}
+
+.menu
+{
+    width: 13em !important;
+    width /**/: 15em;
+    text-align: center;
+    padding: 1em;
+    float: left;
+}
+
+.menu_rechts
+{
+    width: 10em !important;
+    width /**/: 12em;
+    text-align: center;
+    padding: 1em;
+    float: left;
+}
+
+.rechts
+{
+    width: 5em !important;
+    width /**/: 7em;
+    text-align: center;
+    padding: 1em;
+}
+.menu_box img
+{
+    border: none;
+    margin: 0.1em;
+}
+.menu_box
+{
+    margin-bottom: 1em;
+    min-height: 5em;
+    border: 1px solid #00000A;
+}
+.menu_box ul
+{
+    padding: 0em 0em 0em 0.2em;
+    margin: 0.5em 0em 0.5em 0em;
+    list-style-type: none;
+}
+#kurzKomm
+{
+    font-size: 0.8em;
+}
+#kurzKomm_bilder
+{
+    font-size: 0.8em;
+}
+.menu_box h3
+{
+    background-color: #F0EDCA;
+    margin: 0em;
+    border-bottom: 1px solid #00000A;
+}
+
+.menu_box h4
+{
+    margin: 0.2em;
+    padding: 0em;
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+.anzeige
+{
+    /*margin: 1em 0em 1em 12em;*/
+    margin: 1em 0em 1em 2em;
+    width: 52em ;
+    text-align: left;
+    padding: 0em;
+    min-height: 40em;
+    border: 0px solid #00000A;
+    float:left;
+}
+.anzeige h3
+{
+    background-color: #F0EDCA;
+    text-align: center;
+    margin-top: 0em;
+    border: 1px solid #00000A;
+}
+
+.gruppenueberschrift
+{
+    font-size: 1.2em;
+    background-color: #F0EDCA;
+    text-align: center;
+    margin-top: 0em;
+    border-bottom: 1px solid #00000A;
+    border-top: 1px solid #00000A;
+    font-weight: bold;
+}
+
+.abstand
+{
+    padding: 0.3em;
+}
+
+.klappmenu
+{
+    margin: 1em 1em 0em 1em;
+    padding: 0em;
+    border-bottom: 1px solid #00000A;
+}
+.klappmenu a
+{
+    border: 1px solid #00000A;
+    padding: 0em 0.2em 0em 0.2em;
+    margin: 0em;
+}
+
+.klappmenu a:link { color: #605C5C; text-decoration: none;}
+.klappmenu a:visited { color: #605C5C; text-decoration: none;}
+.klappmenu a:hover { border-bottom: 1px solid #E4E4E4; color: #00000A;text-decoration: none;}
+
+.seitenzahlen
+{
+    border-top: 1px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 1px solid #E4E4E4;
+    padding: 0em 0.2em 0em 0.2em;
+    font-weight: bold;
+}
+
+.kernboxI
+{
+    margin: 0em 1em 1em 1em;
+    padding: 1em;
+    border-top: 1px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 1px solid #00000A;
+    min-height: 5em;
+}
+
+.kernbox a:link { color: #605C5C;; text-decoration: none;}
+.kernbox a:visited { color: #605C5C; text-decoration: none;}
+.kernbox a:hover { color: #00000A;text-decoration: none;}
+
+.kernbox
+{
+    margin: 0em 1em 1em 1em;
+    padding: 0em;
+    border-top: 0px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 1px solid #00000A;
+    min-height: 5em;
+}
+.kernbox form label
+{
+    cursor: pointer;
+}
+.kernbox form
+{
+    padding: 0.2em;
+}
+.kernbox form input
+{
+    padding: 0.2em !important;
+    margin: 0.2em !important;
+    padding/**/: 0em;
+    margin/**/: 0em;
+}
+.kernbox form textarea
+{
+    padding: 0.2em !important;
+    margin: 0.2em !important;
+    padding /**/: 0em;
+    margin /**/: 0em;
+}
+.news_oben
+{
+    background-color: #F0EDCA;
+    font-weight: bold;
+    width: 49.45em;
+    min-height: 2em;
+    border-bottom: 1px solid #00000A;
+    border-top: 1px solid #00000A;
+    padding: 0.2em !important;
+    padding /**/: 0.3em 0.2em 0.5em 0.2em;
+    margin: 0.5em 0em 0em 0em ;
+
+}
+
+.news_oben h4
+{
+    display: inline;
+    letter-spacing: 0.7px !important;
+}
+
+.news_titel
+{
+    width: 34em;
+    float:left;
+    padding-top: 0.3em !important;
+    padding-top/**/: 0.2em;
+}
+
+.news_titel a:link { color: #000; text-decoration: none;}
+.news_titel a:visited { color: #000; text-decoration: none;}
+.news_titel a:hover { color: #000; text-decoration: none;}
+
+.news_datum
+{
+    text-align: right;
+    padding-top: 0.3em !important;
+    padding-top/**/: 0.2em;
+}
+
+.news_artikel
+{
+    margin: 0.5em 2.5em 0em 0.5em;
+}
+
+.news_artikel a:link { color: #AE7B00; text-decoration: none;}
+.news_artikel a:visited { color: #AE7B00; text-decoration: none;}
+.news_artikel a:hover { color: #AE7B00;text-decoration: underline;}
+
+.news_artikel img
+{
+    margin-right: 4px !important;
+    margin-right/**/: 0px;
+    border: none;
+}
+
+.news_artikel_down
+{
+    margin: 0.5em 0.2em 0em 0.5em;
+    display: compact;
+}
+.komm_abstand
+{
+    width: 20.8em !important;
+    width /**/: 20.3em;
+    height: 1.5em;
+    float: left;
+}
+
+.faultmessages
+{
+    color: red;
+    padding: 0.2em;
+    background-color: #CCCCCC;
+}
+.rightmessages
+{
+    color: green;
+    padding: 0.2em;
+    background-color: #CCCCCC;
+}
+
+.backfault
+{
+    background-color: red;
+}
+
+.kbox legend
+{
+    border-left: 1px solid #00000A;
+    border-top: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 0px solid #00000A !important;
+    border-bottom /**/: 1px solid #00000A;
+    padding: 0.1em;
+    margin: 0.3em -0em 1.8em 0.7em ;
+    background-color: #F0EDCA;
+}
+
+.red
+{
+    color: red;
+}
+
+.kbox fieldset
+{
+    border: 1px solid #00000A;
+    padding: 1em;
+}
+
+.kbox fieldset input
+{
+    padding: 0.2em !important;
+    margin: 0.2em !important;
+    padding /**/: 0em;
+    margin /**/: 0em;
+}
+
+.fbutton
+{
+    background-color: #E4E4E4;
+    width:15px;
+    height:15px;
+    margin: 0em;
+    padding: 0em;
+    border: 0em;
+}
+
+.text_legend
+{
+    margin-left: 32.5em !important;
+    margin-left/**/: 32em;
+    background: #F0EDCA;
+    height: 14.5em;
+    width: 12em;
+    border-bottom: 1px dotted #00000A;
+    border-top: 1px dotted #00000A;
+    border-left: 1px solid #F0EDCA;
+    border-right: 0px solid #00000A;
+}
+.text_legendnews
+{
+    margin-left: 32.5em;
+    background: #F0EDCA;
+    height: 26.5em;
+    width: 12.9em !important;
+    width/**/: 11.9em;
+    border-bottom: 1px dotted #00000A;
+    border-top: 1px dotted #00000A;
+    border-left: 1px solid #F0EDCA;
+    border-right: 0px solid #00000A;
+}
+.tableclasspn
+{
+    border-bottom: 0px solid #00000A;
+    border-top: 1px solid #00000A;
+    border-left: 0px solid #00000A;
+    border-right: 0px solid #00000A;
+    width: 100%;
+    font-size: 1em;
+}
+.tableclasspn td
+{
+    border-bottom: 1px dashed #00000A;
+    border-top: 0px solid #00000A;
+    border-left: 0px solid #00000A;
+    border-right: 0px solid #00000A;
+}
+.tableclass
+{
+    border-bottom: 1px solid #00000A;
+    border-top: 1px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    width: 100%;
+    font-size: 1em;
+}
+.tableclass td
+{
+    border-bottom: 1px dashed #00000A;
+    border-top: 0px solid #00000A;
+    border-left: 0px solid #00000A;
+    border-right: 0px solid #00000A;
+}
+.tableheader th
+{
+    background-color: #F0EDCA;
+    border-bottom: 1px dashed #00000A;
+}
+.tableheader td
+{
+    background-color: #F0EDCA;
+    border-bottom: 0px dashed #00000A;
+}
+
+.tableclass a:link { color: #605C5C; text-decoration: none;}
+.tableclass a:visited { color: #605C5C; text-decoration: none;}
+.tableclass a:hover { color: #00000A;text-decoration: none;}
+
+.galerielinieoben
+{
+    width: 100%;
+    border-bottom: 0px dashed #00000A;
+    border-top: 1px solid #00000A;
+    border-left: 0px solid #00000A;
+    border-right: 0px solid #00000A;
+}
+
+.ordner img
+{
+    border: none;
+}
+.ordner
+{
+    margin-top: 1em !important;
+    margin-top /**/: 0em;
+    width: 16%;
+    min-height: 75px;
+    font-size: 1em !important;
+    font-size /**/: 0.8em;
+}
+
+.ordnertext
+{
+    margin-top: 1em !important;
+    margin-top /**/: 0em;
+    width: 32%;
+    min-height: 75px;
+    font-size: 1em !important;
+    font-size /**/: 0.8em;
+}
+
+.bildertable
+{
+    border-bottom: 0px dashed #00000A;
+    border-top: 1px solid #00000A;
+    border-left: 0px solid #00000A;
+    border-right: 0px solid #00000A;
+    border-collapse: collapse;
+}
+
+.bildertable td
+{
+    border-bottom: 0px dashed #00000A;
+    border-top: 1px solid #00000A;
+    border-left: 0px solid #00000A;
+    border-right: 1px solid #00000A;
+    width: 25%;
+    height: 150px;
+    text-align: center;
+}
+.bildertable img
+{
+    padding: 3px;
+}
+
+.cleargalerie
+{
+    clear: both;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.dateirahmen
+{
+    margin: 0em 1em 1em 1em;
+    padding: 0.1em;
+    border-top: 1px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 1px solid #00000A;
+}
+
+.dateirahmen a:link { color: #605C5C; text-decoration: none;}
+.dateirahmen a:visited { color: #605C5C; text-decoration: none;}
+.dateirahmen a:hover { color: #00000A;text-decoration: none;}
+
+.picturecenter
+{
+    text-align: center;
+    padding: 0.2em;
+}
+
+.picturecenter table
+{
+    font-size: 1em;
+}
+
+.borderclosed
+{
+    border-top: 1px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 1px solid #00000A;
+    margin: 0px;
+    padding: 1em;
+}
+
+.nachrichten_betreff
+{
+    background-color: #F0EDCA;
+    font-weight: bold;
+    min-height: 2em;
+    border-top: 1px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 1px solid #00000A;
+    padding: 0.2em !important;
+    padding /**/: 0.3em 0.2em 0.5em 0.2em;
+    margin: 0.5em 0.2em -0.5em 0em ;
+}
+.nachricht
+{
+    min-height: 2em;
+    border-top: 0px solid #00000A;
+    border-left: 1px solid #00000A;
+    border-right: 1px solid #00000A;
+    border-bottom: 1px solid #00000A;
+    padding: 0.2em !important;
+    padding /**/: 0.3em 0.2em 0.5em 0.2em;
+    margin: 0.5em 0.2em 0.2em 0em ;
+}
+
+.seitendiv
+{
+    padding-left: 5px;
+}
+
+q
+{
+    display: block;
+    border: 1px dashed black;
+    margin-left: 2em;
+    background-image: url(../gfx/quote.gif); background-repeat: no-repeat;
+    background-color: #D9D3D3;
+    padding: 0.6em 0.4em 0.4em 4.5em;
+    font-style: italic;
+    min-height: 2.4em;
+}
+q:before
+{
+    content: none;
+}
+q:after
+{
+    content: none;
+}
+
+
+
+*html q
+{
+    height: 4.4em;
+}
+
+*html .inhalt
+{
+    height: 30em;
+}
+
+*html .menu_box
+{
+    height: 5em;
+}
+*html .anzeige
+{
+    height: 10em;
+}
+*html .kernbox
+{
+    height: 5em;
+}
+*html .ordner
+{
+    height: 75px;
+}
+*html .ordnertext
+{
+    height: 75px;
+}

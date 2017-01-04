@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        {% block stylesheets %}<link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
+        <link href="{{ asset('bundles/website/gfx/fav.ico') }}" rel="shortcut icon" type="image/x-icon" />
+        <link title="RSS" href="http://feeds.feedburner.com/KaneOnline" rel="alternate" type="application/rss+xml" />
+        <meta content="text/xhtml; charset=utf-8" http-equiv="Content-Type" />
+        <meta name="Title" content="Chilan" />
+        <meta name="Author" content="Ulf Wohlers" />
+        <meta name="Publisher" content="Ulf Wohlers" />
+        <meta name="Keywords" content="Bilder, Blog, chilan, Reinkarnation, Ulf, Wohlers, Ulf Wohlers, Photos, Party, Kiel, Hohenwestedt, L&uuml;beck, Schleswig-Holstein, Deutschland, Partybilder" />
+        <meta name="Description" content="A small Blog over Books, Movies and otherthings and a small photo gallery" />
+        <meta name="Language" content="de" />
+        <meta name="Robots" content="index,follow" />
+        <meta name="verify-v1" content="7+pKPKV+SfwPOW4SLA7c1Wf7AnjCesic6ygrayoOMzw=" />
+        <title>{% block title %}Chilan - Reinkarnation eines Blogs{% endblock %}</title>
+        {% block headJavascript %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

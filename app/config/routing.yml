@@ -1,0 +1,3 @@
+app:
+    resource: "@WebsiteBundle/Controller/MainController.php"
+    type:     annotation
