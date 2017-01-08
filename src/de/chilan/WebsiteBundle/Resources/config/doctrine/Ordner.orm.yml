@@ -1,0 +1,41 @@
+de\chilan\WebsiteBundle\Entity\Ordner:
+    type: entity
+    table: ordner
+    id:
+        ordnerid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: OrdnerID
+            generator:
+                strategy: IDENTITY
+    fields:
+        ordnersid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: OrdnerSID
+        ordnername:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: Ordnername
+        ordnerbeschreibung:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Ordnerbeschreibung
+        ordnerzugriff:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Ordnerzugriff
+    lifecycleCallbacks: {  }

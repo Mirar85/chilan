@@ -1,0 +1,39 @@
+de\chilan\WebsiteBundle\Entity\Online:
+    type: entity
+    table: online
+    id:
+        ip:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            id: true
+            column: IP
+        session:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            id: true
+            column: Session
+    fields:
+        code:
+            type: string
+            nullable: false
+            length: 24
+            options:
+                fixed: false
+            column: Code
+        datum:
+            type: datetime
+            nullable: false
+            column: Datum
+        daten:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

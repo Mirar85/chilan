@@ -1,0 +1,45 @@
+de\chilan\WebsiteBundle\Entity\NewsKommentare:
+    type: entity
+    table: news_kommentare
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        newsId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: News_id
+        userId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: User_id
+        ip:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+            column: IP
+        text:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Text
+        eintragdatum:
+            type: datetime
+            nullable: false
+            column: Eintragdatum
+    lifecycleCallbacks: {  }

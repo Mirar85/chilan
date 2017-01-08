@@ -1,0 +1,71 @@
+de\chilan\WebsiteBundle\Entity\Bilder:
+    type: entity
+    table: bilder
+    id:
+        bildid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BildID
+            generator:
+                strategy: IDENTITY
+    fields:
+        bildname:
+            type: string
+            nullable: false
+            length: 128
+            options:
+                fixed: false
+            column: Bildname
+        bildtyp:
+            type: string
+            nullable: false
+            length: 4
+            options:
+                fixed: false
+            column: Bildtyp
+        anzahlbewertungen:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: AnzahlBewertungen
+        letztebewertung:
+            type: datetime
+            nullable: false
+            column: LetzteBewertung
+        bewertung:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Bewertung
+        bildtext:
+            type: string
+            nullable: false
+            length: 128
+            options:
+                fixed: false
+            column: Bildtext
+        bildpfad:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: Bildpfad
+        anzahlbetrachtet:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: AnzahlBetrachtet
+        albenrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: AlbenRID
+    lifecycleCallbacks: {  }

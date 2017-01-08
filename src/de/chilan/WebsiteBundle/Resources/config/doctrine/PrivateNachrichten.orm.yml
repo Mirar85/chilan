@@ -1,0 +1,49 @@
+de\chilan\WebsiteBundle\Entity\PrivateNachrichten:
+    type: entity
+    table: private_nachrichten
+    id:
+        nachrichtenid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: NachrichtenID
+            generator:
+                strategy: IDENTITY
+    fields:
+        versenderrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: VersenderRID
+        empfaengerrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: EmpfaengerRID
+        nbetreff:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: NBetreff
+        ntext:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: NText
+        ndatum:
+            type: datetime
+            nullable: false
+            column: NDatum
+        gelesen:
+            type: boolean
+            nullable: false
+            column: Gelesen
+    lifecycleCallbacks: {  }

@@ -1,0 +1,27 @@
+de\chilan\WebsiteBundle\Entity\Benutzerrechte:
+    type: entity
+    table: benutzerrechte
+    id:
+        benutzerrechteid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BenutzerrechteID
+            generator:
+                strategy: IDENTITY
+    fields:
+        gruppenrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: GruppenRID
+        userDatarid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: user_dataRID
+    lifecycleCallbacks: {  }

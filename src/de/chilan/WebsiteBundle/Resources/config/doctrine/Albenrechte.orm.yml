@@ -1,0 +1,27 @@
+de\chilan\WebsiteBundle\Entity\Albenrechte:
+    type: entity
+    table: albenrechte
+    id:
+        albenrechteid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: AlbenrechteID
+            generator:
+                strategy: IDENTITY
+    fields:
+        gruppenrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: GruppenRID
+        albenrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: AlbenRID
+    lifecycleCallbacks: {  }

@@ -1,0 +1,39 @@
+de\chilan\WebsiteBundle\Entity\Position:
+    type: entity
+    table: Position
+    id:
+        positionid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: PositionID
+            generator:
+                strategy: IDENTITY
+    fields:
+        xpos:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: XPos
+        ypos:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: YPos
+        bildschirm:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Bildschirm
+        laufschriftrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: LaufschriftRID
+    lifecycleCallbacks: {  }

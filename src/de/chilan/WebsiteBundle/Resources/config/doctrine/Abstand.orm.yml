@@ -1,0 +1,26 @@
+de\chilan\WebsiteBundle\Entity\Abstand:
+    type: entity
+    table: Abstand
+    id:
+        bildschirm1:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Bildschirm1
+        bildschirm2:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Bildschirm2
+    fields:
+        abstand:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Abstand
+    lifecycleCallbacks: {  }

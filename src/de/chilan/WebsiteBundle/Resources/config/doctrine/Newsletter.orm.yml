@@ -1,0 +1,29 @@
+de\chilan\WebsiteBundle\Entity\Newsletter:
+    type: entity
+    table: newsletter
+    id:
+        newsletterid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: NewsletterID
+            generator:
+                strategy: IDENTITY
+    fields:
+        newslettertitel:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Newslettertitel
+        newslettertext:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Newslettertext
+    lifecycleCallbacks: {  }

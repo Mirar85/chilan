@@ -1,0 +1,36 @@
+de\chilan\WebsiteBundle\Entity\NewsKategorie:
+    type: entity
+    table: news_kategorie
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID
+        language:
+            type: string
+            nullable: false
+            length: 3
+            options:
+                fixed: false
+                default: de
+            id: true
+            column: Language
+    fields:
+        kategorie:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: Kategorie
+        kategorieEn:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+            column: Kategorie_en
+    lifecycleCallbacks: {  }

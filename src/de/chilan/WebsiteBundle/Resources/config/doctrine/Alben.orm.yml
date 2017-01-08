@@ -1,0 +1,61 @@
+de\chilan\WebsiteBundle\Entity\Alben:
+    type: entity
+    table: alben
+    id:
+        albenid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: AlbenID
+            generator:
+                strategy: IDENTITY
+    fields:
+        albenbeschreibung:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Albenbeschreibung
+        albenname:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: Albenname
+        bilderanzahl:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Bilderanzahl
+        albendatum:
+            type: datetime
+            nullable: false
+            column: Albendatum
+        albenvondatum:
+            type: date
+            nullable: true
+            column: Albenvondatum
+        ordnerrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: OrdnerRID
+        albenzugriff:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Albenzugriff
+        vorschaubildrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: VorschaubildRID
+    lifecycleCallbacks: {  }

@@ -1,0 +1,38 @@
+de\chilan\WebsiteBundle\Entity\Bilderkommentar:
+    type: entity
+    table: bilderkommentar
+    id:
+        bildkomid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BildkomID
+            generator:
+                strategy: IDENTITY
+    fields:
+        bildkomtext:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Bildkomtext
+        bildkomdatum:
+            type: datetime
+            nullable: false
+            column: Bildkomdatum
+        bildrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: BildRID
+        benutzerrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: BenutzerRID
+    lifecycleCallbacks: {  }

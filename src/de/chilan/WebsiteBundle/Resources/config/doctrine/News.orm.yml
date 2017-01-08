@@ -1,0 +1,71 @@
+de\chilan\WebsiteBundle\Entity\News:
+    type: entity
+    table: news
+    indexes:
+        Autor:
+            columns:
+                - Autor
+                - Kategorie
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID
+        language:
+            type: string
+            nullable: false
+            length: 3
+            options:
+                fixed: false
+                default: de
+            id: true
+            column: Language
+    fields:
+        titel:
+            type: string
+            nullable: false
+            length: 64
+            options:
+                fixed: false
+            column: Titel
+        text:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: Text
+        titelEn:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: Titel_en
+        textEn:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+            column: Text_en
+        autor:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Autor
+        kategorie:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Kategorie
+        eintragdatum:
+            type: datetime
+            nullable: false
+            column: Eintragdatum
+    lifecycleCallbacks: {  }

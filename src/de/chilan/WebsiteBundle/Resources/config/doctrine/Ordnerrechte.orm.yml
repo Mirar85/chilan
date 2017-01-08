@@ -1,0 +1,27 @@
+de\chilan\WebsiteBundle\Entity\Ordnerrechte:
+    type: entity
+    table: ordnerrechte
+    id:
+        ordnerrechteid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: OrdnerrechteID
+            generator:
+                strategy: IDENTITY
+    fields:
+        gruppenrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: GruppenRID
+        ordnerrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: OrdnerRID
+    lifecycleCallbacks: {  }

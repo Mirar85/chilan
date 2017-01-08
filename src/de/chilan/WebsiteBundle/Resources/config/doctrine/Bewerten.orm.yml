@@ -1,0 +1,30 @@
+de\chilan\WebsiteBundle\Entity\Bewerten:
+    type: entity
+    table: bewerten
+    id:
+        ipAdress:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            id: true
+            column: ip_adress
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+        bildrid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BildRID
+    fields:
+        zeit:
+            type: datetime
+            nullable: false
+    lifecycleCallbacks: {  }

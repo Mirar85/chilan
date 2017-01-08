@@ -1,0 +1,22 @@
+de\chilan\WebsiteBundle\Entity\Gruppen:
+    type: entity
+    table: gruppen
+    id:
+        gruppenid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: GruppenID
+            generator:
+                strategy: IDENTITY
+    fields:
+        gruppenname:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+            column: Gruppenname
+    lifecycleCallbacks: {  }

@@ -1,0 +1,28 @@
+de\chilan\WebsiteBundle\Entity\CssStyle:
+    type: entity
+    table: css_style
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        nummer:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: false
+            column: Nummer
+        bezeichnung:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+            column: Bezeichnung
+    lifecycleCallbacks: {  }
