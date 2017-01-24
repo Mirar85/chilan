@@ -4,7 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        {% block stylesheets %}<link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
+        {% block stylesheets %}
+            <!-- Bootstrap -->
+            <link href="{{ asset('bundles/website/css/bootstrap.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('bundles/website/css/bootstrap-theme.min.css') }}" rel="stylesheet">
+            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+              <script src="{{ asset('bundles/website/css/bootstrap-theme.min.css') }}https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+            <link href="{{ asset('bundles/website/css/main.css') }}" rel="stylesheet" type="text/css" />
+        {% endblock %}
         <link href="{{ asset('bundles/website/gfx/fav.ico') }}" rel="shortcut icon" type="image/x-icon" />
         <link title="RSS" href="http://feeds.feedburner.com/KaneOnline" rel="alternate" type="application/rss+xml" />
         <meta content="text/xhtml; charset=utf-8" http-equiv="Content-Type" />
@@ -17,7 +28,12 @@
         <meta name="Robots" content="index,follow" />
         <meta name="verify-v1" content="7+pKPKV+SfwPOW4SLA7c1Wf7AnjCesic6ygrayoOMzw=" />
         <title>{% block title %}Chilan - Reinkarnation eines Blogs{% endblock %}</title>
-        {% block headJavascript %}{% endblock %}
+        {% block headJavascript %}
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="{{ asset('bundles/website/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}

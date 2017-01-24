@@ -58,4 +58,8 @@ de\chilan\WebsiteBundle\Entity\Alben:
             options:
                 unsigned: false
             column: VorschaubildRID
+    oneToMany:
+            bilder:
+                targetEntity: Bilder
+                mappedBy: alben
     lifecycleCallbacks: {  }

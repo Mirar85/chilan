@@ -1,0 +1,125 @@
+{% extends 'WebsiteBundle:Page:index.html.twig' %}
+
+{% block breadcrumb %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div id="carousel-picture-slide" class="carousel slide" data-ride="carousel" data-interval="false">
+            <!-- Verpackung für die Elemente -->
+            <div class="carousel-inner" role="listbox">
+                {% for picture in pictures %}
+                <div class="item{% if loop.first %} active{% endif %}">
+                    <div class="row ">
+                        <div class="col-md-9 no-padding">
+                            <div class="carousel-controls">
+                                <a class="left carousel-control" href="#carousel-picture-slide" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Zurück</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-picture-slide" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Weiter</span>
+                                </a>
+                            </div>
+                            <img class="img-responsive fill" src="{{ url('_picture_index',{'picture':picture.bildid }) }}" alt="[{% if picture.bildtext == '' %}{{ picture.bildid }}{% else %}{{ picture.getBildtext }}{% endif %}]" />
+                            {% if picture.bildtext != '' %}
+                            <div class="carousel-caption">
+                                <h3>{{ picture.bildtext }}</h3>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Bewertung</h3>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                            <h3>Kommentare</h3>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-md-1">
+                <div class="carousel-controls">
+                    <a class="left carousel-control carousel-control-list" href="#carousel-picture-show" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Zurück</span>
+                    </a>
+                </div>
+            </div><!--
+    --><div class="col-xs-10 col-md-7 vcenter">
+                <div id="carousel-picture-show" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <!-- Verpackung für die Elemente -->
+                    <div class="carousel-inner" role="listbox">
+                        {% for picture in pictures %}
+                            {% if loop.index0 is divisible by(5) %}
+                        {% if not loop.first %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+                        <div class="item{% if loop.first %} active{% endif %}">
+                             <div class="controls draggable ui-widget-content">
+                                <ul class="nav ui-widget-header">
+                            {% endif %}
+                                    <li data-target="#carousel-picture-slide" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}><a href="#"><img src="{{ url('_picture_index',{'picture':picture.bildid }) }}" alt="Bild {{ loop.index0 }}" /></a></li>
+                            {% if loop.index0 is divisible by(5) %}
+
+                            {% endif %}
+                                    {% if loop.last %}
+                                </ul>
+                             </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div><!--
+    --><div class="col-xs-1 col-md-1 no-padding">
+                <div class="carousel-controls pull-right ">
+                    <a class="right carousel-control carousel-control-list" href="#carousel-picture-show" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Weiter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(ev){
+    var items = $(".nav li").length;
+    var leftRight=0;
+    if(items>5){
+    leftRight=(items-5)*50*-1;
+    }
+    $('#carousel-picture-slide').on('slide.bs.carousel', function (evt) {
+        var newOverviewSlide = parseInt($(evt.relatedTarget).index() / 5, 10);;
+        $('#carousel-picture-show').carousel().carousel(newOverviewSlide);
+
+        $('#carousel-picture-show .controls li.active').removeClass('active');
+        $('#carousel-picture-show .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
+    })
+
+    $('.nav').draggable({
+    axis: "x",
+    stop: function() {
+    var ml = parseInt($(this).css('left'));
+    if(ml>0)
+    $(this).animate({left:"0px"});
+    if(ml<leftRight)
+    $(this).animate({left:leftRight+"px"});
+
+    }
+
+    });
+    });
+    $('.carousel').carousel({
+        wrap: false
+    });
+    </script>
+{% endblock %}

@@ -156,4 +156,79 @@ class Ordner
     {
         return $this->ordnerzugriff;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $children;
+
+    /**
+     * @var \de\chilan\WebsiteBundle\Entity\Ordner
+     */
+    private $parent;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->children = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add child
+     *
+     * @param \de\chilan\WebsiteBundle\Entity\Ordner $child
+     *
+     * @return Ordner
+     */
+    public function addChild(\de\chilan\WebsiteBundle\Entity\Ordner $child)
+    {
+        $this->children[] = $child;
+
+        return $this;
+    }
+
+    /**
+     * Remove child
+     *
+     * @param \de\chilan\WebsiteBundle\Entity\Ordner $child
+     */
+    public function removeChild(\de\chilan\WebsiteBundle\Entity\Ordner $child)
+    {
+        $this->children->removeElement($child);
+    }
+
+    /**
+     * Get children
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getChildren()
+    {
+        return $this->children;
+    }
+
+    /**
+     * Set parent
+     *
+     * @param \de\chilan\WebsiteBundle\Entity\Ordner $parent
+     *
+     * @return Ordner
+     */
+    public function setParent(\de\chilan\WebsiteBundle\Entity\Ordner $parent = null)
+    {
+        $this->parent = $parent;
+
+        return $this;
+    }
+
+    /**
+     * Get parent
+     *
+     * @return \de\chilan\WebsiteBundle\Entity\Ordner
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
 }

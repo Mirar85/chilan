@@ -1,0 +1,105 @@
+{% extends 'WebsiteBundle:Page:index.html.twig' %}
+
+{% block breadcrumb %}
+{% endblock %}
+
+{% block content %}
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Positionsanzeiger -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Verpackung für die Elemente -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="{{ url('',{'pictureId',pictureId }) }}" alt="{{ pictureAlt }}" class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>in der Stadt der Türme</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url('',{'pictureId',pictureId }) }}" alt="{{ pictureAlt }}" class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>in der Stadt an der Förde</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/DSCN7434.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>zwischen den Bergen</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/DSCN8594.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>im Land des Eises</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/DSCN8962.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>am schwarzen Strand</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/DSCN9432.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>auf den Ruinen der Vergangenheit</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/IMG_3120.JPG" alt="..." />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>in der wüstenähnlichen Dünenlandschaft</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/IMG_5120.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>auf dem Land</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/IMG_5470.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>im nächsten Park</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/IMG_6049.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>in königlicher Pracht</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/IMG_3088.JPG" alt="..." class="fill" />
+                <div class="carousel-caption">
+                    <h3>Willkommen</h3>
+                    <p>am Ende der Welt</p>
+                </div>
+            </div>
+        </div>
+        <!-- Schalter -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Zurück</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Weiter</span>
+        </a>
+    </div>
+{% endblock %}

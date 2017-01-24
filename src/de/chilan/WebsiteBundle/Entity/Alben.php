@@ -77,6 +77,11 @@ class Alben
      */
     private $vorschaubildrid;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Bilder", mappedBy="alben")
+     */
+    private $bilder;
+
 
 
     /**
@@ -279,5 +284,46 @@ class Alben
     public function getVorschaubildrid()
     {
         return $this->vorschaubildrid;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->bilder = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add bilder
+     *
+     * @param \de\chilan\WebsiteBundle\Entity\Bilder $bilder
+     *
+     * @return Alben
+     */
+    public function addBilder(\de\chilan\WebsiteBundle\Entity\Bilder $bilder)
+    {
+        $this->bilder[] = $bilder;
+
+        return $this;
+    }
+
+    /**
+     * Remove bilder
+     *
+     * @param \de\chilan\WebsiteBundle\Entity\Bilder $bilder
+     */
+    public function removeBilder(\de\chilan\WebsiteBundle\Entity\Bilder $bilder)
+    {
+        $this->bilder->removeElement($bilder);
+    }
+
+    /**
+     * Get bilder
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBilder()
+    {
+        return $this->bilder;
     }
 }

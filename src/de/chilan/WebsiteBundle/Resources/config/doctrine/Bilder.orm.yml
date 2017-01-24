@@ -68,4 +68,11 @@ de\chilan\WebsiteBundle\Entity\Bilder:
             options:
                 unsigned: false
             column: AlbenRID
+    manyToOne:
+            alben:
+                targetEntity: Alben
+                inversedBy: bilder
+                joinColumn:
+                    name: AlbenRID
+                    referencedColumnName: AlbenID
     lifecycleCallbacks: {  }

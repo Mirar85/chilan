@@ -1,0 +1,120 @@
+.nav a {
+    color: #5a5a5a;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 14px 10px;
+    text-transform: uppercase;
+}
+
+.nav li {
+    display: inline;
+}
+
+.jumbotron {
+    background-position: center center;
+    background-image:url('../gfx/chilan_Collection_oben.jpg');
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron .container {
+    position: relative;
+    top:30px;
+}
+
+.jumbotron h1 {
+    color: #fff;
+    font-size: 48px;
+    font-family: 'Shift', "Kedage";
+    font-weight: bold;
+}
+
+.jumbotron p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.learn-more {
+    background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+    font-family: 'Shift', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.learn-more a {
+    /*color: #00b0ff;*/
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#carousel-picture-show .controls{
+
+    overflow:hidden;
+    padding:0;
+    margin:0;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    background:#fff;
+    border:0;
+}
+#carousel-picture-show .controls .nav{
+
+    padding:0;
+    margin:0;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    background:#fff;
+    border: 0;
+}
+#carousel-picture-show .controls li {
+    transition: all .5s ease;
+    display: inline-block;
+    max-width: 100px;
+    height: 80px;
+    opacity:.5;
+    overflow: hidden;
+}
+#carousel-picture-show .controls li a{
+    padding:0;
+}
+#carousel-picture-show .controls li img{
+    width:100%;
+    height:auto
+}
+
+#carousel-picture-show .controls li.active {
+    background-color:#fff;
+    opacity:1;
+}
+#carousel-picture-show .controls a small {
+    overflow:hidden;
+    display:block;
+    font-size:10px;
+    margin-top:5px;
+    font-weight:bold
+}
+
+.carousel-control-list {
+    position:relative;
+    width:3em;
+    margin:0 auto;
+    display: inline-block;
+    height: 80px;
+}
+
+.glyphicon-big-size {
+    font-size: 10em;
+}
+
+.glyphicon-yellow {
+    color: #ffcc2d;
+}

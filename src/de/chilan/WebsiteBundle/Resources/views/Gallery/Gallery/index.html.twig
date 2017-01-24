@@ -1,0 +1,77 @@
+{% extends 'WebsiteBundle:Page:index.html.twig' %}
+
+{% block breadcrumb %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for folder in folders %}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="thumbnail tablelikeFolders">
+                    <span class="glyphicon-yellow glyphicon-big-size glyphicon glyphicon-folder-open" aria-hidden=true></span>
+                    <div class="caption">
+                        <a href="{{ url('_gallery_overview',{ 'folder' : folder.ordnerID }) }}"><h3>{{ folder.ordnername }}</h3></a>
+                        <p>{{ folder.ordnerbeschreibung }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+    {% for album in alben %}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="thumbnail tablelikeAlben">
+                <img style="width:100%" class="img-rounded" src="{{ url('_picture_index',{'picture':album.vorschaubildrid }) }}" alt="{{ album.albenname }}" />
+                <div class="caption">
+                    <a href="{{ url('_album_overview',{ 'album' : album.albenID }) }}"><h3>{{ album.albenname }}</h3></a>
+                    <p>{{ album.albenbeschreibung }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<div id="users-device-size">
+    <div id="xs" class="visible-xs"></div>
+    <div id="sm" class="visible-sm"></div>
+    <div id="md" class="visible-md"></div>
+    <div id="lg" class="visible-lg"></div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script language="javascript" type="text/javascript">
+        function getBootstrapDeviceSize() {
+            return $('#users-device-size').find('div:visible').first().attr('id');
+        }
+        function changeHightsForClass(divclass) {
+            var heights = $(divclass).map(function() {
+                    return $(this).height();
+                }).get(),
+
+                maxHeight = Math.max.apply(null, heights);
+
+            $(divclass).height(maxHeight);
+        }
+
+        $( document ).ready(function() {
+            if (getBootstrapDeviceSize() != 'xs') {
+                changeHightsForClass('.tablelikeFolders');
+                changeHightsForClass('.tablelikeAlben');
+            }
+        });
+        window.onresize = function() {
+            if (getBootstrapDeviceSize() != 'xs') {
+                changeHightsForClass('.tablelikeFolders');
+                changeHightsForClass('.tablelikeAlben');
+            }
+            else {
+                $('.tablelikeFolders').height('100%');
+                $('.tablelikeAlben').height('100%');
+            }
+        }
+    </script>
+{% endblock %}

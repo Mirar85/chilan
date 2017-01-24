@@ -1,0 +1,11 @@
+_main:
+    resource: "@WebsiteBundle/Controller/PageController.php"
+    type:     annotation
+_gallery:
+    resource: "@WebsiteBundle/Controller/Gallery/GalleryController.php"
+    type:     annotation
+    prefix: /galerie
+_picture:
+    resource: "@WebsiteBundle/Controller/Gallery/PictureController.php"
+    type:     annotation
+    prefix: /picture

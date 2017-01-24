@@ -84,6 +84,12 @@ class Bilder
      */
     private $albenrid;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Alben", inversedBy="alben")
+     * @ORM\JoinColumn(name="albenrid", referencedColumnName="id")
+     */
+    private $album;
+
 
 
     /**
@@ -310,5 +316,34 @@ class Bilder
     public function getAlbenrid()
     {
         return $this->albenrid;
+    }
+    /**
+     * @var \de\chilan\WebsiteBundle\Entity\Alben
+     */
+    private $alben;
+
+
+    /**
+     * Set alben
+     *
+     * @param \de\chilan\WebsiteBundle\Entity\Alben $alben
+     *
+     * @return Bilder
+     */
+    public function setAlben(\de\chilan\WebsiteBundle\Entity\Alben $alben = null)
+    {
+        $this->alben = $alben;
+
+        return $this;
+    }
+
+    /**
+     * Get alben
+     *
+     * @return \de\chilan\WebsiteBundle\Entity\Alben
+     */
+    public function getAlben()
+    {
+        return $this->alben;
     }
 }
