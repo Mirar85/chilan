@@ -9,3 +9,7 @@ _picture:
     resource: "@WebsiteBundle/Controller/Gallery/PictureController.php"
     type:     annotation
     prefix: /picture
+_news:
+    resource: "@WebsiteBundle/Controller/Blog/NewsController.php"
+    type:     annotation
+    prefix: /news

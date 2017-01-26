@@ -4,6 +4,12 @@ parameters:
 #    parameter_name: value
 
 services:
+   de.chilan.menu.voter.request:
+        class: de\chilan\WebsiteBundle\Menu\RequestVoter
+        arguments:
+          ["@service_container","@request_stack"]
+        tags:
+          - { name: knp_menu.voter }
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

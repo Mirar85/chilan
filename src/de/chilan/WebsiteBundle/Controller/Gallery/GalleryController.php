@@ -89,4 +89,13 @@ class GalleryController extends MainController
         $this->setOutputData('base_dir',realpath($this->getParameter('kernel.root_dir').'/..'));
         return $this->render('@Website/Main/index.html.twig', $this->getOutputDataArray());
     }
+
+    /**
+     * @Route("/toplist/index.html", defaults={"picture":"0"}, name="_gallery_toplist")
+     */
+    public function toplistAction(Request $request)
+    {
+        $this->setOutputData('base_dir',realpath($this->getParameter('kernel.root_dir').'/..'));
+        return $this->render('@Website/Main/index.html.twig', $this->getOutputDataArray());
+    }
 }

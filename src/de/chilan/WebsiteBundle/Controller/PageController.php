@@ -21,4 +21,13 @@ class PageController extends MainController
         $this->setOutputData('base_dir',realpath($this->getParameter('kernel.root_dir').'/..'));
         return $this->render('@Website/Page/index.html.twig', $this->getOutputDataArray());
     }
+
+    /**
+     * @Route("/login", name="_login")
+     */
+    public function loginAction(Request $request)
+    {
+        $this->setOutputData('base_dir',realpath($this->getParameter('kernel.root_dir').'/..'));
+        return $this->render('@Website/Page/login.html.twig', $this->getOutputDataArray());
+    }
 }
