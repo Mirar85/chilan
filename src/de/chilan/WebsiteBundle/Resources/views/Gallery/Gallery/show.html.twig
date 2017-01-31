@@ -22,7 +22,7 @@
                                     <span class="sr-only">Weiter</span>
                                 </a>
                             </div>
-                            <img class="img-responsive fill" src="{{ url('_picture_index',{'picture':picture.bildid }) }}" alt="[{% if picture.bildtext == '' %}{{ picture.bildid }}{% else %}{{ picture.getBildtext }}{% endif %}]" />
+                            <img class="img-responsive fill" src="{{ url('_picture_resource',{'picture':picture.bildid }) }}" alt="[{% if picture.bildtext == '' %}{{ picture.bildid }}{% else %}{{ picture.getBildtext }}{% endif %}]" />
                             {% if picture.bildtext != '' %}
                             <div class="carousel-caption">
                                 <h3>{{ picture.bildtext }}</h3>
@@ -30,9 +30,14 @@
                             {% endif %}
                         </div>
                         <div class="col-md-3">
+                            <a href="{{ path('_picture_index', {'picture': picture.bildId }) }}">Bild als Vollbild darstellen</a>
                             <h3>Bewertung</h3>
                             <p><a href="#" class="btn btn-primary" role="button">Button</a>
                             <h3>Kommentare</h3>
+                            {{ dump(comments) }}
+                            {% for comment in comments %}
+                                {{ comment.bildkomtext }}
+                            {% endfor %}
                             <p><a href="#" class="btn btn-primary" role="button">Button</a>
                         </div>
                     </div>
@@ -64,7 +69,7 @@
                              <div class="controls draggable ui-widget-content">
                                 <ul class="nav ui-widget-header">
                             {% endif %}
-                                    <li data-target="#carousel-picture-slide" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}><a href="#"><img src="{{ url('_picture_index',{'picture':picture.bildid }) }}" alt="Bild {{ loop.index0 }}" /></a></li>
+                                    <li data-target="#carousel-picture-slide" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}><a href="#"><img src="{{ url('_picture_resource',{'picture':picture.bildid }) }}" alt="Bild {{ loop.index0 }}" /></a></li>
                             {% if loop.index0 is divisible by(5) %}
 
                             {% endif %}

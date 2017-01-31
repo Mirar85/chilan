@@ -24,7 +24,7 @@
     {% for album in alben %}
         <div class="col-sm-6 col-md-4 col-lg-3">
             <div class="thumbnail tablelikeAlben">
-                <img style="width:100%" class="img-rounded" src="{{ url('_picture_index',{'picture':album.vorschaubildrid }) }}" alt="{{ album.albenname }}" />
+                <img style="width:100%" class="img-rounded" src="{{ url('_picture_resource',{'picture':album.vorschaubildrid }) }}" alt="{{ album.albenname }}" />
                 <div class="caption">
                     <a href="{{ url('_album_overview',{ 'album' : album.albenID }) }}"><h3>{{ album.albenname }}</h3></a>
                     <p>{{ album.albenbeschreibung }}</p>

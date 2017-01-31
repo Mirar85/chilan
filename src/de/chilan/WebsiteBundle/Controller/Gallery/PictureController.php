@@ -10,6 +10,7 @@ namespace de\chilan\WebsiteBundle\Controller\Gallery;
 
 use de\chilan\WebsiteBundle\Controller\MainController;
 use de\chilan\WebsiteBundle\Entity\Bilder;
+use de\chilan\WebsiteBundle\Entity\Bilderkommentar;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -21,9 +22,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class PictureController extends MainController
 {
     /**
-     * @Route("/{picture}", name="_picture_index")
+     * @Route("/{picture}", name="_picture_resource")
      */
-    public function indexAction(Request $request,Bilder $picture)
+    public function pictureResourceAction(Request $request,Bilder $picture)
     {
         $session = $request->getSession();
 
@@ -33,6 +34,20 @@ class PictureController extends MainController
         $response->headers->set('Content-Type', 'image/png');
 
         return $response;//$this->render('@Website/Gallery/Gallery/index.html.twig', $this->getOutputDataArray());
+    }
+
+    /**
+     * @Route("/full/{picture}", name="_picture_index")
+     */
+    public function indexAction(Request $request,Bilder $picture)
+    {
+        $comments = $this->getDoctrine()
+            ->getRepository(Bilderkommentar::class)
+            ->findBy(['bildrid' => $picture->getBildid()]);
+        $this->setOutputData('picture',$picture);
+        $this->setOutputData('comments',$comments);
+
+        return $this->render('@Website/Gallery/Picture/index.html.twig', $this->getOutputDataArray());
     }
 }
 /*
